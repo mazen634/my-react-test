@@ -1,16 +1,61 @@
-# React + Vite
+# My React Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A small React application that introduces a junior full-stack developer and demonstrates a few React and JavaScript fundamentals. The page displays a time-based greeting, a short introduction, basic arithmetic examples, and a list of web technologies.
 
-Currently, two official plugins are available:
+## What the app shows
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- A greeting and heading rendered by the `Heading` component.
+- Four arithmetic examples (addition, subtraction, multiplication, and division) provided by `Calculator.js`.
+- A list of technologies: HTML, CSS, JavaScript, and React.
+- A greeting color selected from the time value currently calculated in `Heading.jsx`.
 
-## React Compiler
+## Built with
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 18
+- Create React App (`react-scripts`)
+- JavaScript
+- React Testing Library and Jest DOM (available in the project dependencies)
 
-## Expanding the Oxlint configuration
+## Requirements
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- Node.js and npm
+
+## Run locally
+
+Clone the repository and install its dependencies:
+
+```bash
+git clone https://github.com/Amukayoung/my-react-test.git
+cd my-react-test
+npm install
+npm start
+```
+
+The development server opens at [http://localhost:3000](http://localhost:3000). It reloads when source files change.
+
+## Available commands
+
+| Command | Description |
+| --- | --- |
+| `npm start` | Start the development server. |
+| `npm test` | Run the test runner in watch mode. |
+| `npm run build` | Create an optimized production build in `build/`. |
+| `npm run eject` | Copy the Create React App configuration into the project. This is a one-way operation. |
+
+## Project structure
+
+```
+src/
+├── index.js                  # Mounts the React app
+└── components/
+    ├── App.jsx               # Composes the page components
+    ├── Heading.jsx           # Greeting, introduction, and arithmetic examples
+    ├── Lists.jsx             # Web technology list
+    └── Calculator.js         # Arithmetic helper functions
+public/
+└── index.html                # HTML document and React root element
+```
+
+## Notes
+
+This repository is a learning project. The greeting currently uses a fixed date and time in `Heading.jsx`, so it does not change with the visitor's actual local time.
